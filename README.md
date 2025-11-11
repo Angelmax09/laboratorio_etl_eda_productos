@@ -1,43 +1,126 @@
-﻿#  Laboratorio Práctico: ETL y Análisis Exploratorio de Datos (EDA)
+ Laboratorio Práctico — ETL & Análisis Exploratorio de Datos (EDA)
 
-##  Descripción del Proyecto
+Este proyecto corresponde al Laboratorio 1 de la Especialización en Análisis de Datos.
+El objetivo principal es aplicar un flujo end-to-end de análisis, desde la ingestión de datos hasta la formulación de conclusiones analíticas, utilizando herramientas del ecosistema Python.
 
-Este proyecto corresponde al **Laboratorio 1 de la Especialización en Análisis de Datos**, cuyo objetivo es aplicar de forma integrada las competencias adquiridas durante el curso, desarrollando un proceso completo de análisis que incluye:
+ Objetivos del proyecto
 
-- **Extracción, Transformación y Carga (ETL)** de un conjunto de datos reales.
-- **Análisis Exploratorio de Datos (EDA)** con Python y pandas.
-- **Interpretación analítica** mediante la formulación de tres preguntas de negocio basadas en la exploración.
-- **Publicación en GitHub** con ejecución directa en Google Colab.
+Realizar el proceso ETL (Extracción, Transformación y Carga) sobre un conjunto de datos real.
 
----
+Ejecutar un análisis exploratorio de datos (EDA) utilizando Python y pandas.
 
-##  Acceso al Notebook
+Formular tres preguntas de negocio basadas en los hallazgos del análisis.
 
-Podés abrir y ejecutar el notebook directamente en Google Colab desde el siguiente enlace:
+Publicar la solución en GitHub con acceso directo al entorno Colab.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NRSmIvWs1jU6NZWSHxqzF5ni3eu2W50T?usp=sharing)
+ Acceso al cuaderno en Google Colab
 
----
+Podés abrir y ejecutar el análisis haciendo clic en el siguiente enlace:
 
-##  Dataset Utilizado
+🔗 Google Colab:
+https://colab.research.google.com/drive/1NRSmIvWs1jU6NZWSHxqzF5ni3eu2W50T?usp=sharing
 
-**Fuente:** Archivo local `productos.csv`  
-**Descripción:** Dataset con información de productos comercializados, incluyendo marca, presentación, precios de lista y precios promocionales.  
-**Columnas principales:**
-- `productos_descripcion`: Nombre del producto.  
-- `productos_marca`: Marca del producto.  
-- `productos_precio_lista`: Precio base sin descuento.  
-- `productos_precio_unitario_promo1`: Precio con promoción aplicada.  
-- `productos_cantidad_presentacion`: Cantidad o volumen de presentación del producto.  
+ Conjunto de datos
 
----
+Fuente: Archivo local productos.csv
 
-##  1. Proceso ETL
+Descripción: Información de productos comercializados, incluyendo marca, presentación y precios.
 
-###  Extracción
-Se importó el archivo CSV al entorno de trabajo en Google Colab utilizando `pandas.read_csv()`.
+ Columnas principales
+Columna	Descripción
+productos_descripcion	Nombre del producto
+productos_marca	Marca del producto
+productos_precio_lista	Precio base sin descuento
+productos_precio_unitario_promo1	Precio con promoción aplicada
+productos_cantidad_presentacion	Tamaño o cantidad de presentación
+1. Proceso ETL
+ Extracción
 
-```python
+Se cargó el archivo CSV utilizando pandas:
+
+import pandas as pd
+
 df = pd.read_csv('/content/productos.csv', sep='|')
+
+ Transformación
+
+Se realizaron tareas de limpieza y estandarización como:
+
+Ajuste de tipos de datos
+
+Manejo de valores faltantes
+
+Corrección de nombres y formato
+
+Normalización de las variables de precio
+
+Detalles completos disponibles en el cuaderno.
+
+ Carga
+
+Los datos transformados se mantuvieron en memoria para análisis posterior.
+Opcionalmente pueden exportarse para su reutilización.
+
+2. Análisis Exploratorio de Datos (EDA)
+
+Se exploraron las características principales del dataset, incluyendo:
+
+Distribución de precios
+
+Comparación entre precio de lista y promocional
+
+Presencia de marcas relevantes
+
+Análisis de presentaciones y volumen
+
+Identificación de outliers
+
+Las visualizaciones se realizaron con:
+
+pandas
+
+matplotlib
+
+seaborn (si aplica)
+
+3. Preguntas de Negocio
+
+Durante el proceso se formularon tres preguntas orientadas al negocio, tales como:
+
+¿Qué marcas presentan mayor oferta de productos?
+
+¿Cuál es la distribución de precios por marca?
+
+¿Qué productos muestran la mayor diferencia entre precio base y promocional?
+
+Las preguntas finales pueden variar según iteraciones del análisis.
+
+ Requisitos
+
+Python 3.9+
+
+pandas
+
+matplotlib
+
+seaborn (opcional)
+
+entorno Google Colab (recomendado)
+
+ Estructura del repositorio
+├── data/
+│   └── productos.csv
+├── notebook/
+│   └── laboratorio1.ipynb
+└── README.md
+
+ Resultados clave
+
+Se preparó exitosamente el dataset para análisis.
+
+Se desarrolló un EDA descriptivo que permitió identificar tendencias de precios y marcas.
+
+Se plantearon 3 preguntas de negocio para interpretación y toma de decisiones.
+
 
 
