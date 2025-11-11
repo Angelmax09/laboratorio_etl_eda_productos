@@ -2,7 +2,7 @@
 
 ##  Descripción del Proyecto
 
-Este proyecto corresponde al **Laboratorio Final de la Especialización en Análisis de Datos**, cuyo objetivo es aplicar de forma integrada las competencias adquiridas durante el curso, desarrollando un proceso completo de análisis que incluye:
+Este proyecto corresponde al **Laboratorio 1 de la Especialización en Análisis de Datos**, cuyo objetivo es aplicar de forma integrada las competencias adquiridas durante el curso, desarrollando un proceso completo de análisis que incluye:
 
 - **Extracción, Transformación y Carga (ETL)** de un conjunto de datos reales.
 - **Análisis Exploratorio de Datos (EDA)** con Python y pandas.
@@ -39,4 +39,5 @@ Se importó el archivo CSV al entorno de trabajo en Google Colab utilizando `pan
 
 ```python
 df = pd.read_csv('/content/productos.csv', sep='|')
+
 
