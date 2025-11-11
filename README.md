@@ -107,13 +107,6 @@ seaborn (opcional)
 
 entorno Google Colab (recomendado)
 
- Estructura del repositorio
-├── data/
-│   └── productos.csv
-├── notebook/
-│   └── laboratorio1.ipynb
-└── README.md
-
  Resultados clave
 
 Se preparó exitosamente el dataset para análisis.
@@ -121,6 +114,7 @@ Se preparó exitosamente el dataset para análisis.
 Se desarrolló un EDA descriptivo que permitió identificar tendencias de precios y marcas.
 
 Se plantearon 3 preguntas de negocio para interpretación y toma de decisiones.
+
 
 
 
